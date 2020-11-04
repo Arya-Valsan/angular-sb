@@ -1,0 +1,16 @@
+<!-- <ul>
+    <li *ngFor="let course of courses">Title: {{course.title}} - Summary: {{course.summary}}</li>
+</ul> -->
+
+<div class="container">
+    <div>
+        Total Courses Enrolled: {{totalEnrolled}} 
+    </div>
+
+    <hr/>
+
+    <div class="row">
+      <app-card *ngFor="let course of courses" [title]="course.title" [summary]="course.summary" (userEnrolled)="handleUserEnrolled($event)"></app-card>
+    </div>
+</div>
+

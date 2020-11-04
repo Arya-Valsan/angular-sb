@@ -1,0 +1,25 @@
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Id</span>
+    </div>
+    <input type="number" #id class="form-control" placeholder="Enter a valid id" aria-label="Username" aria-describedby="basic-addon1">
+
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Product Name</span>
+    </div>
+    <input type="text"  #name  class="form-control" placeholder="Enter a valid name" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Category</span>
+    </div>
+    <input type="text"  #salary class="form-control" placeholder="Enter a valid salary" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+<div>
+    <button type="button" class="btn btn-primary" (click)="addEmployee(id.value, name.value, salary.value)">Add Employee</button>
+</div>
+

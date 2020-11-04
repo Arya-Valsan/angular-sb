@@ -1,0 +1,23 @@
+<!-- <h4>{{today | date:'yyyy-MMM-dd'}} </h4>
+<h4>{{'today is little COLD day' | titlecase}} </h4>
+<h4>{{stringArray}} </h4>
+<h4>{{'Good sUNny day but afraid pollution DAYS near in DElhi' | sentenceCase}} </h4> -->
+<div class="input-group mb-3">
+
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Add Todo</span>
+    </div>
+    <input #todo type="text" class="form-control" placeholder="Enter your todo" aria-label="Username" aria-describedby="basic-addon1">
+    <button class="btn btn-primary" (click)="addTodo(todo.value)">Add</button>
+
+    
+    
+  </div>
+  
+  <hr/>
+  <div>
+    <input #search (keyup)="0" type="text" class="form-control" placeholder="Search for todo" />
+  </div>
+<ul class="list-group list-group-flush" >
+    <li class="list-group-item"  *ngFor="let todo of todos | searchText:search.value"> <span [ngClass]="{red: todo.done}">{{todo.text}}</span></li>
+</ul>
